@@ -55,7 +55,7 @@ class File(models.Model):
         ondelete="restrict",
         auto_join=True,
         required=True,
-        index=True,
+        index='btree',
     )
     # Override acording to defined in AbstractDmsMixin
     storage_id = fields.Many2one(
@@ -105,7 +105,7 @@ class File(models.Model):
 
     size = fields.Float(readonly=True)
 
-    checksum = fields.Char(string="Checksum/SHA1", readonly=True, index=True)
+    checksum = fields.Char(string="Checksum/SHA1", readonly=True, index='btree')
 
     content_binary = fields.Binary(attachment=False, prefetch=False, invisible=True)
 

@@ -4,17 +4,17 @@
 {
     "name": "Document Management System",
     "summary": """Document Management System for Odoo""",
-    "version": "15.0.1.8.2",
+    "version": "16.0.1.0.0",
     "category": "Document Management",
     "license": "LGPL-3",
     "website": "https://github.com/OCA/dms",
     "author": "MuK IT, Tecnativa, Odoo Community Association (OCA)",
     "depends": [
-        "web_drop_target",
+        #"web_drop_target", #TODO only exist in v15
         "mail",
         "http_routing",
         "portal",
-        "mail_preview_base",
+        #"mail_preview_base", #TODO only exist in v15
     ],
     "data": [
         "security/security.xml",
@@ -24,30 +24,30 @@
         "views/menu.xml",
         "views/tag.xml",
         "views/category.xml",
-        "views/dms_file.xml",
+        #"views/dms_file.xml", #TODO need js_class: file_list_view.js
         "views/directory.xml",
-        "views/storage.xml",
+        #"views/storage.xml", #TODO depends on view: dms_file.xml
         "views/dms_access_groups_views.xml",
-        "views/res_config_settings.xml",
+        #"views/res_config_settings.xml", #TODO depends on view: views/storage.xml
         "views/dms_portal_templates.xml",
     ],
-    "assets": {
-        "web.assets_backend": [
-            "dms/static/src/scss/variables.scss",
-            "dms/static/src/scss/file_kanban.scss",
-            "dms/static/src/scss/directory_kanban.scss",
-            "dms/static/src/js/fields/path.js",
-            "dms/static/src/js/views/many_drop_target.js",
-            "dms/static/src/js/views/search_panel.esm.js",
-            "dms/static/src/js/views/file_list_controller.js",
-            "dms/static/src/js/views/file_list_view.js",
-            "dms/static/src/js/views/file_kanban_controller.js",
-            "dms/static/src/js/views/file_kanban_renderer.js",
-            "dms/static/src/js/views/file_kanban_view.js",
-        ],
-        "web.assets_qweb": ["dms/static/src/xml/views.xml"],
-        "web.assets_frontend": ["dms/static/src/js/dms_portal_tour.js"],
-    },
+    #"assets": {
+    #    "web.assets_backend": [
+    #        "dms/static/src/scss/variables.scss",
+    #        "dms/static/src/scss/file_kanban.scss",
+    #        "dms/static/src/scss/directory_kanban.scss",
+    #        "dms/static/src/js/fields/path.js",
+    #        "dms/static/src/js/views/many_drop_target.js",
+    #        "dms/static/src/js/views/search_panel.esm.js",
+    #        "dms/static/src/js/views/file_list_controller.js",
+    #        "dms/static/src/js/views/file_list_view.js",
+    #        "dms/static/src/js/views/file_kanban_controller.js",
+    #        "dms/static/src/js/views/file_kanban_renderer.js",
+    #        "dms/static/src/js/views/file_kanban_view.js",
+    #    ],
+    #    "web.assets_qweb": ["dms/static/src/xml/views.xml"],
+    #    "web.assets_frontend": ["dms/static/src/js/dms_portal_tour.js"],
+    #},
     "demo": [
         "demo/res_users.xml",
         "demo/access_group.xml",

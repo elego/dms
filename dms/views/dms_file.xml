@@ -515,10 +515,10 @@
         <field name="name">dms_file.form</field>
         <field name="model">dms.file</field>
         <field name="inherit_id" ref="view_dms_file_form" />
-        <field name="groups_id" eval="[(6, 0, [ref('dms.group_dms_manager')])]" />
         <field name="arch" type="xml">
             <field name="storage_id" position="attributes">
                 <attribute name="options">{}</attribute>
+                <attribute name="groups">dms.group_dms_manager</attribute>
             </field>
         </field>
     </record>
