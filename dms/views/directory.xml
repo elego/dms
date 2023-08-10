@@ -635,11 +635,15 @@
         <field name="arch" type="xml">
             <field name="is_root_directory" position="attributes">
                 <attribute name="invisible">0</attribute>
+                <!-- TODO Fix Update Error
                 <attribute name="groups">dms.group_dms_manager</attribute>
+                -->
             </field>
             <field name="storage_id" position="attributes">
                 <attribute name="options">{}</attribute>
+                <!-- TODO Fix Update Error
                 <attribute name="groups">dms.group_dms_manager</attribute>
+                -->
             </field>
         </field>
     </record>
